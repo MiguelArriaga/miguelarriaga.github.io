@@ -49,12 +49,10 @@ p.translation {
 
 
 p.chorus span {
-    font-size: 0.75*var(--text_font_size)
     display: none;
 }
 
 p.verse span {
-    font-size: 0.75*var(--text_font_size)
     display: none;
 }
 
@@ -68,4 +66,5 @@ p.show-chords span {
   vertical-align: bottom;
   font-weight: bold;
   white-space:nowrap;
+  font-size: calc(0.75*var(--text_font_size));
 }
