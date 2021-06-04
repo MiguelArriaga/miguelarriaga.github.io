@@ -8,7 +8,7 @@
    font-size: var(--text_font_size);
    /*font-family: "Times New Roman", Times, serif;*/
    font-family: Helvetica, Arial, Sans-Serif;
-   max-width: 60em;
+   max-width: calc(60*var(--text_font_size));
 }
 
 h2 {
@@ -45,7 +45,7 @@ p.verse {
 p.translation {
     background-color:rgba(201,201,201,0.3);
     font-size: calc(0.75*var(--text_font_size));
-    max-width: 30em;
+    max-width: calc(30*var(--text_font_size));
 }
 
 
