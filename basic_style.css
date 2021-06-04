@@ -49,10 +49,12 @@ p.translation {
 
 
 p.chorus span {
+    font-size: var(--text_font_size)
     display: none;
 }
 
 p.verse span {
+    font-size: var(--text_font_size)
     display: none;
 }
 
