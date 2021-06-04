@@ -62,7 +62,7 @@ p.show-chords span {
   display:inline-block;
   width: 0;
   overflow:visible;
-  line-height: calc(var(--text_font_size) + 1em);
+  line-height: calc(var(--text_font_size) + 1.1em);
   vertical-align: bottom;
   font-weight: bold;
   white-space:nowrap;
