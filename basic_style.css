@@ -1,6 +1,6 @@
 
 :root {
-  --text_font_size: 14px;
+  --text_font_size: 16px;
 }
 
 
@@ -12,24 +12,24 @@
 }
 
 h2 {
-    font-size: 200%;
+    font-size: calc(2*var(--text_font_size));
 }
 
 
 p.title {
-    font-size: 160%;
+    font-size: calc(1.6*var(--text_font_size));
     font-weight: bold;
     margin-bottom:0 ;
 }
 
 p.artist {
-    font-size: 80%;
+    font-size: calc(0.80*var(--text_font_size));
     font-style: italic;
     margin:0 ;
 }
 
 p.capo {
-    font-size: 75%;
+    font-size: calc(0.75*var(--text_font_size));
     margin:0 ;
 }
 
@@ -44,7 +44,7 @@ p.verse {
 
 p.translation {
     background-color:rgba(201,201,201,0.3);
-    font-size: 75%;
+    font-size: calc(0.75*var(--text_font_size));
 }
 
 
