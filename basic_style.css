@@ -65,4 +65,5 @@ p.show-chords span {
   line-height: 2em;
   vertical-align: bottom;
   font-weight: bold;
+  white-space:nowrap;
 }
