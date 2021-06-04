@@ -60,11 +60,11 @@ p.verse span {
 
 p.show-chords span {
   position: relative;
-  top: -0.5em;
+  top: calc(-0.5*var(--text_font_size));
   display:inline-block;
   width: 0;
   overflow:visible;
-  line-height: 2em;
+  line-height: calc(var(--text_font_size) + 1em);
   vertical-align: bottom;
   font-weight: bold;
   white-space:nowrap;
