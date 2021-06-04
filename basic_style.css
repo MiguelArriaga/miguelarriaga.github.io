@@ -1,0 +1,69 @@
+
+:root {
+  --text_font_size: 14px;
+}
+
+
+* {
+   font-size: var(--text_font_size);
+   /*font-family: "Times New Roman", Times, serif;*/
+   font-family: Helvetica, Arial, Sans-Serif;
+   max-width: 50em;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+
+p.title {
+    font-size: 160%;
+    font-weight: bold;
+    margin-bottom:0 ;
+}
+
+p.artist {
+    font-size: 80%;
+    font-style: italic;
+    margin:0 ;
+}
+
+p.capo {
+    font-size: 75%;
+    margin:0 ;
+}
+
+
+p.chorus {
+    font-style: italic;
+}
+
+p.verse {
+
+}
+
+p.translation {
+    background-color:rgba(200,200,200,0.3);
+    font-size: 75%;
+}
+
+
+p.chorus span {
+    display: none;
+}
+
+p.verse span {
+    display: none;
+}
+
+p.show-chords span {
+  position: relative;
+  top: calc(-0.5*var(--text_font_size));
+  display:inline-block;
+  width: 0;
+  overflow:visible;
+  line-height: calc(var(--text_font_size) + 1em);
+  vertical-align: bottom;
+  font-size: 80%;
+  font-weight: bold;
+}
