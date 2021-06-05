@@ -15,8 +15,7 @@ function generateSongInput() {
         argslist.push(sg+"="+mp)
     }
     var linkToSheet = document.getElementById("linkToSheet");
-    var curr_page = window.location.href.split("MakeSongSheet")[0]
-    linkToSheet.setAttribute("href", curr_page+"Folha.html?"+argslist.join("&"));
+    linkToSheet.setAttribute("href", "Folha.html?"+argslist.join("&"));
     linkToSheet.innerHTML = "Link to Sheet";
 
 }

@@ -9,7 +9,7 @@ function loadPage() {
     var indextable = document.getElementById("songIndexTable");
     var songsection = document.getElementById("songsSection");
 
-    var base_loc = window.location.href.split("Folha")[0]+'songs/'
+    var base_loc = getRoot()+ 'songs/'
 
     var currRow = 1;
     var link = ""
