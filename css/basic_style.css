@@ -10,7 +10,7 @@
 }
 
 .outer {
-  margin: 0 auto;
+  max-width: 40em;
 }
 
 .inner {
@@ -22,6 +22,7 @@
 
 table {
   border-collapse: collapse;
+  max-width: 40em;
 }
 
 .songsheet {
@@ -37,7 +38,6 @@ td{
   text-align: left;
   /*border: 1px solid #ddd;*/
   padding: 5px 10px 5px 10px;
-  font-size: calc(1.2*var(--text_font_size));
 }
 
 
