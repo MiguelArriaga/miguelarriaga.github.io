@@ -9,23 +9,37 @@
    font-family: Helvetica, Arial, Sans-Serif;
 }
 
+.outer {
+  margin: 0 auto;
+}
+
+.inner {
+  margin-left: 20px;
+  background-color: #eee;
+  padding: 5px;
+}
+
+
 table {
   border-collapse: collapse;
 }
 
+.songsheet {
+    border: 1px solid #ddd;
+}
 
 th {
   text-align: left;
   padding: 5px 10px 5px 10px;
-    font-size: calc(1.2*var(--text_font_size));
 }
 
 td{
   text-align: left;
   /*border: 1px solid #ddd;*/
   padding: 5px 10px 5px 10px;
-    font-size: calc(1.2*var(--text_font_size));
+  font-size: calc(1.2*var(--text_font_size));
 }
+
 
 h2 {
     font-size: calc(2*var(--text_font_size));

@@ -4,7 +4,7 @@ var nextId = 1;
 // ID of Song currently editing
 var activeId = 0;
 
-function generateSongInput() {
+function generateSongSheet() {
     var table = document.getElementById("songTable");
     var argslist = []
     var mp = ""
@@ -21,6 +21,47 @@ function generateSongInput() {
 //    linkToSheet.innerHTML = "Link to Sheet";
 
 }
+
+function generateStandardMass() {
+  // First check if a <tbody> tag exists, add one if not
+  if ($("#songTable tbody").length == 0) {
+    $("#songTable").append("<tbody></tbody>");
+  }
+
+  // Append song to table
+  $("#songTable tbody").append(songManualRow(0,"Entrada",""));
+  $("#songTable tbody").append(songManualRow(1,"Kyrie",""));
+  $("#songTable tbody").append(songManualRow(2,"Glória",""));
+  $("#songTable tbody").append(songManualRow(3,"Salmo",""));
+  $("#songTable tbody").append(songManualRow(4,"Alleluia",""));
+  $("#songTable tbody").append(songManualRow(5,"Ofertório",""));
+  $("#songTable tbody").append(songManualRow(6,"Sanctus",""));
+  $("#songTable tbody").append(songManualRow(7,"Agnus Dei",""));
+  $("#songTable tbody").append(songManualRow(8,"Comunhão",""));
+  $("#songTable tbody").append(songManualRow(9,"Comunhão",""));
+  $("#songTable tbody").append(songManualRow(10,"Acção de Graças",""));
+  $("#songTable tbody").append(songManualRow(11,"Saída",""));
+
+  // Increment next ID to use
+  nextId = 12;
+
+}
+function songManualRow(id,section,song) {
+  var ret =
+  "<tr>" +
+    "<td>" +
+      "<button type='button' onclick='songDisplay(this);' data-id='"+id+"'>E</button>" +
+    "</td>" +
+    "<td>" + section + "</td>" +
+    "<td>" + song + "</td>" +
+    "<td>" +
+      "<button type='button' onclick='songDelete(this);' data-id='"+id+"'>X</button>" +
+    "</td>" +
+  "</tr>"
+  return ret;
+}
+
+
 
 function songDisplay(ctl) {
   var row = $(ctl).parents("tr");
@@ -87,22 +128,12 @@ function songBuildTableRow(id) {
   var ret =
   "<tr>" +
     "<td>" +
-      "<button type='button' " +
-              "onclick='songDisplay(this);' " +
-              "class='btn btn-default' " +
-              "data-id='" + id + "'>" +
-              "<span class='glyphicon glyphicon-edit' />" +
-      "</button>" +
+      "<button type='button' onclick='songDisplay(this);' data-id='"+id+"'>E</button>" +
     "</td>" +
     "<td>" + $("#SongSection").val() + "</td>" +
     "<td>" + $("#SearchSongInput").val() + "</td>" +
     "<td>" +
-      "<button type='button' " +
-              "onclick='songDelete(this);' " +
-              "class='btn btn-default' " +
-              "data-id='" + id + "'>" +
-              "<span class='glyphicon glyphicon-remove' />" +
-      "</button>" +
+      "<button type='button' onclick='songDelete(this);' data-id='"+id+"'>X</button>" +
     "</td>" +
   "</tr>"
 
