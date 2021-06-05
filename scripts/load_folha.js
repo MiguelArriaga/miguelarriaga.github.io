@@ -15,7 +15,8 @@ function loadPage() {
     var link = ""
 
     for (const [key, value] of urlParams) {
-        if (key[0] != "_") {
+        if (key[0] != "_" && key != 'undefined') {
+
             row = indextable.insertRow(currRow)
             row.insertCell(0).innerHTML = value
             var new_name = songs_dict_id_nice[key].split(" - ")[0]
@@ -40,6 +41,8 @@ function basicParamCheck(){
     for (const [key, value] of urlParams) {
         if (key[0] != "_") {
             console.log(key +"  :  "+ value);
+            console.log(typeof key === 'undefined');
+            console.log(key == 'undefined');
         }
 
     }
