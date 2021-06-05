@@ -1,0 +1,93 @@
+
+:root {
+  --text_font_size: 16px;
+}
+
+* {
+   font-size: var(--text_font_size);
+   /*font-family: "Times New Roman", Times, serif;*/
+   font-family: Helvetica, Arial, Sans-Serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+th {
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+    font-size: calc(1.2*var(--text_font_size));
+}
+
+td{
+  text-align: left;
+  /*border: 1px solid #ddd;*/
+  padding: 5px 10px 5px 10px;
+    font-size: calc(1.2*var(--text_font_size));
+}
+
+h2 {
+    font-size: calc(2*var(--text_font_size));
+}
+
+
+p.pre_title {
+    font-size: calc(1.6*var(--text_font_size));
+    font-style: italic;
+    font-weight: regular;
+    margin-bottom:0 ;
+}
+p.title {
+    font-size: calc(1.6*var(--text_font_size));
+    font-weight: bold;
+    margin:0 ;
+}
+
+p.artist {
+    font-size: calc(0.80*var(--text_font_size));
+    font-style: italic;
+    margin:0 ;
+}
+
+p.capo {
+    font-size: calc(0.75*var(--text_font_size));
+    margin:0 ;
+}
+
+
+p.chorus {
+    font-style: italic;
+}
+
+p.verse {
+
+}
+
+p.translation {
+    background-color:rgba(201,201,201,0.3);
+    font-size: calc(0.75*var(--text_font_size));
+    max-width: 30em;
+}
+
+
+p.chorus span {
+    display: none;
+}
+
+p.verse span {
+    display: none;
+}
+
+p.show-chords span {
+  position: relative;
+  top: calc(-0.5*var(--text_font_size));
+  display:inline-block;
+  width: 0;
+  overflow:visible;
+  line-height: calc(var(--text_font_size) + 1.1em);
+  vertical-align: bottom;
+  font-weight: bold;
+  white-space:nowrap;
+  font-size: calc(0.75*var(--text_font_size));
+}

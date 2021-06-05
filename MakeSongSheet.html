@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Make Song Sheet</title>
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/autocomplete.css" rel="stylesheet" />
+<!-- -->
+  <script src="scripts/jquery-1.11.0.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/table_script.js"></script>
+  <script src="scripts/variables.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Create Booklet</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <table id="songTable"
+               class="table table-bordered table-condensed table-striped">
+          <thead>
+            <tr>
+              <th>Edit</th>
+              <th>Section</th>
+              <th>Song</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            Song Information
+          </div>
+          <div class="panel-body">
+
+            <div class="form-group">
+              <label for="SongSection">
+                Section
+              </label>
+              <input type="text"
+                     class="form-control"
+                     placeholder="Entrada"
+                     id="SongSection" />
+            </div>
+
+            <div class="form-group autocomplete">
+              <label for="SearchSongInput">
+                Song
+              </label>
+              <input  id="SearchSongInput"
+                      type="text"
+                      name="myCountry"
+                      placeholder="Song"
+                      class="form-control" />
+            </div>
+
+          </div>
+          <div class="panel-footer">
+            <div class="row">
+              <div class="col-xs-12">
+                <button type="button" id="updateButton"
+                        class="btn btn-primary"
+                        onclick="songUpdate();">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--  <input type="checkbox" id="put_chords" name="put_chords" value="Yes">-->
+<!--  <label for="put_chords"> Show Chords</label><br>-->
+
+  <button type="button" id="generateButton"
+          class="btn btn-primary"
+          onclick="generateSongInput();">
+    Generate Song Sheet
+  </button>
+  <br>
+  <br>
+  <a id="linkToSheet" href=""></a>
+  </div>
+
+<script src="scripts/autocomplete.js"></script>
+
+</body>
+</html>
