@@ -3,6 +3,7 @@
 <head>
   <title>Make Song Sheet</title>
   <link href="css/bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/basic_style.css" />
   <link href="css/autocomplete.css" rel="stylesheet" />
 <!-- -->
   <script src="scripts/jquery-1.11.0.min.js"></script>
@@ -12,14 +13,14 @@
   <script src="scripts/variables.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <h2>Create Booklet</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <table id="songTable"
                class="table table-bordered table-condensed table-striped">
           <thead>
@@ -35,7 +36,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <div class="panel panel-primary">
           <div class="panel-heading">
             Song Information
@@ -88,9 +89,6 @@
           onclick="generateSongInput();">
     Generate Song Sheet
   </button>
-  <br>
-  <br>
-  <a id="linkToSheet" href=""></a>
   </div>
 
 <script src="scripts/autocomplete.js"></script>

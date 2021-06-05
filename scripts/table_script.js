@@ -14,9 +14,11 @@ function generateSongInput() {
         sg = encodeURI(songs_dict_nice_id[row.cells[2].innerHTML])
         argslist.push(sg+"="+mp)
     }
-    var linkToSheet = document.getElementById("linkToSheet");
-    linkToSheet.setAttribute("href", "Folha.html?"+argslist.join("&"));
-    linkToSheet.innerHTML = "Link to Sheet";
+    window.location.href = "Folha.html?"+argslist.join("&");
+
+//    var linkToSheet = document.getElementById("linkToSheet");
+//    linkToSheet.setAttribute("href", "Folha.html?"+argslist.join("&"));
+//    linkToSheet.innerHTML = "Link to Sheet";
 
 }
 
