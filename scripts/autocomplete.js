@@ -1,5 +1,22 @@
 
-function autocomplete(inp, arr) {
+
+function isValidSong(songStr,testStr) {
+    var songs = songStr.toUpperCase()
+    var songsarr = songs.split(" ")
+    var ts = testStr.toUpperCase()
+    var t_firstword = ts.split(" ")[0]
+
+    if ((songs.includes(ts)) && (songsarr.some(x => x.startsWith(t_firstword)))){
+        return true
+    }
+    return false
+}
+
+function autocomplete(ACField, MapDict, autosearch=false) {
+
+   var inp = document.getElementById(ACField)
+   var arr = Object.keys(MapDict).sort()
+
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
@@ -20,7 +37,9 @@ function autocomplete(inp, arr) {
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
 //        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-        if (arr[i].toUpperCase().includes(val.toUpperCase())) {
+//        if (arr[i].toUpperCase().includes(val.toUpperCase())) {
+//        if (arr[i].toUpperCase().split(" ").some(x => x.startsWith(val.toUpperCase()))) {
+        if (isValidSong(arr[i],val)) {
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
@@ -37,6 +56,9 @@ function autocomplete(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+              if (autosearch) {
+                findSong()
+              }
           });
           a.appendChild(b);
         }
@@ -99,6 +121,3 @@ function autocomplete(inp, arr) {
   });
 }
 
-
-/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("SearchSongInput"), Object.keys(songs_dict_nice_id).sort());

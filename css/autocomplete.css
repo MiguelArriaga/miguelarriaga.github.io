@@ -3,9 +3,12 @@
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
+  width: 200px;
+  margin: auto;
 }
 
 .autocomplete-items div {
+  display: block;
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
@@ -21,4 +24,6 @@
 .autocomplete-active {
   background-color: DodgerBlue !important;
   color: #ffffff;
+  width: "50px";
+  margin: auto;
 }

@@ -50,12 +50,12 @@ function songManualRow(id,section,song) {
   var ret =
   "<tr>" +
     "<td>" +
-      "<button type='button' onclick='songDisplay(this);' data-id='"+id+"'>E</button>" +
+      "<button type='button' onclick='songDisplay(this);' data-id='"+id+"'><i class="fas fa-edit"></i></button>" +
     "</td>" +
     "<td>" + section + "</td>" +
     "<td>" + song + "</td>" +
     "<td>" +
-      "<button type='button' onclick='songDelete(this);' data-id='"+id+"'>X</button>" +
+      "<button type='button' onclick='songDelete(this);' data-id='"+id+"'><i class="far fa-trash-alt"></i></button>" +
     "</td>" +
   "</tr>"
   return ret;
@@ -125,18 +125,7 @@ function songUpdateInTable(id) {
 
 // Build a <table> row of Song data
 function songBuildTableRow(id) {
-  var ret =
-  "<tr>" +
-    "<td>" +
-      "<button type='button' onclick='songDisplay(this);' data-id='"+id+"'>E</button>" +
-    "</td>" +
-    "<td>" + $("#SongSection").val() + "</td>" +
-    "<td>" + $("#SearchSongInput").val() + "</td>" +
-    "<td>" +
-      "<button type='button' onclick='songDelete(this);' data-id='"+id+"'>X</button>" +
-    "</td>" +
-  "</tr>"
-
+  var ret = songManualRow(id,$("#SongSection").val(),$("#SearchSongInput").val())
   return ret;
 }
 

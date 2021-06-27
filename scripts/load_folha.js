@@ -17,7 +17,13 @@ function getRoot(){
     return loc.protocol + "//" + loc.hostname +"/" + path + "/";
 }
 
-function loadPage() {
+
+function editSheet(){
+    const queryString = window.location.search;
+    window.location.href = "MakeSongSheet.html"+queryString;
+}
+
+function loadFolhaPage() {
 
 
     const queryString = window.location.search;
