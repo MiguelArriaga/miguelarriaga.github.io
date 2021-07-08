@@ -1,7 +1,7 @@
 
 
 function isValidSong(songStr,testStr) {
-    var songs = songStr.toUpperCase()
+    var songs = songStr.toUpperCase().replace("<I>", "").replace("</I>", "")
     var songsarr = songs.split(" ")
     var ts = testStr.toUpperCase()
     var t_firstword = ts.split(" ")[0]
