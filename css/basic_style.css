@@ -94,6 +94,10 @@ p.verse span {
     display: none;
 }
 
+
+[chord]::after {
+  content: attr(chord);
+}
 p.show-chords span {
   position: relative;
   top: calc(-0.5*var(--text_font_size));
@@ -105,6 +109,12 @@ p.show-chords span {
   font-weight: bold;
   white-space:nowrap;
   font-size: calc(0.75*var(--text_font_size));
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
